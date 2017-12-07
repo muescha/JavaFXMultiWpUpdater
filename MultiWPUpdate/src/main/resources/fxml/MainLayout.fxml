@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="768.0" minWidth="1024.0" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="tvWpInstances" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tcWpName" prefWidth="75.0" text="WP Installation" />
+          <TableColumn fx:id="tcWpHost" prefWidth="75.0" text="Host" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+              <MenuBar>
+                  <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                          <items>
+                              <MenuItem fx:id="miClose" mnemonicParsing="false" onAction="#handleMenuItemClose" text="Close" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                          <items>
+                              <MenuItem fx:id="miAbout" mnemonicParsing="false" onAction="#handleMenuItemAbout" text="About" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="btnAddWpInstance" mnemonicParsing="false" onAction="#handleAddEntry" />
+                  <Button fx:id="btnRemoveWpInstance" mnemonicParsing="false" onAction="#handleDeleteSelectedEntry" />
+                  <Button fx:id="btnPluginUpload" mnemonicParsing="false" onAction="#handleButtonPluginUpload" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</fx:root>
